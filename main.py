@@ -15,14 +15,12 @@ class MainHandler(tornado.web.RequestHandler):
         self.set_header('content-type', 'text/plain')
         self.write('Hello, World! ' + response.body[:100])
 
-def main():
+application = tornado.web.Application([
+    (r"/", MainHandler),
+])
+
+if __name__ == "__main__":
     tornado.options.parse_command_line()
-    application = tornado.web.Application([
-        (r"/", MainHandler),
-    ])
     http_server = tornado.httpserver.HTTPServer(application)
     http_server.listen(5050 or os.environ['PORT'])
     tornado.ioloop.IOLoop.current().start()
-
-if __name__ == "__main__":
-    main()
