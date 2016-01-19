@@ -1,7 +1,6 @@
 import os
 import tornado.httpserver
 import tornado.ioloop
-import tornado.options
 import tornado.web
 from tornado import gen
 from tornado.httpclient import AsyncHTTPClient

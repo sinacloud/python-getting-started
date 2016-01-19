@@ -1,1 +1,1 @@
-web: python main.py
+web: gunicorn --worker-class tornado main:application

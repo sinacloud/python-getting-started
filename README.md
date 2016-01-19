@@ -1,11 +1,17 @@
 # Python应用示例
 
+对于Python应用，您可以使用gunicorn来做web server。你只需：
+
+- 将gunicorn依赖加入requirements.txt文件里。
+- 修改Procfile，修改web启动命令为gunicorn对应的启动命令。
+
 ## 本地运行
 
 ```sh
 $ git clone https://github.com/sinacloud/python-getting-started.git
 $ cd python-getting-started
-$ python main.py
+$ git checkout gunicorn
+$ gunicorn --worker-class tornado main:application
 ```
 
 现在，本示例应用已经跑在了你的 localhost:5050 端口上了。
@@ -16,7 +22,7 @@ $ python main.py
 
 ```
 $ git remote add sinacloud $GIT_REPOS_URL_FOR_YOUR_APPLICATIRON
-$ git push sinacloud master:1
+$ git push sinacloud gunicorn:1
 ```
 
 登陆sinacloud容器云的管理页面，在部署页面中，点击部署。
@@ -26,5 +32,3 @@ $ git push sinacloud master:1
 ## 相关文档
 
 - [Python应用部署指南](http://www.sinacloud.com/doc/sc2/python-getting-started.html)
-
-
