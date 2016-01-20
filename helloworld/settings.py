@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'helloworld.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'app_' + os.environ['APPNAME'],
-        'USER': os.environ['ACCESSKEY'],
-        'PASSWORD': os.environ['SECRETKEY'],
-        'HOST': os.environ['MYSQL_HOST'],
-        'PORT': os.environ['MYSQL_PORT'],
+        'NAME': 'app_' + os.environ.get('APPNAME'),
+        'USER': os.environ.get('ACCESSKEY'),
+        'PASSWORD': os.environ('SECRETKEY'),
+        'HOST': os.environ('MYSQL_HOST'),
+        'PORT': os.environ('MYSQL_PORT'),
     }
 }
 
