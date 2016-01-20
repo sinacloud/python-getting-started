@@ -1,11 +1,13 @@
-# Python应用示例
+# Django使用示例
 
 ## 本地运行
 
 ```sh
 $ git clone https://github.com/sinacloud/python-getting-started.git
 $ cd python-getting-started
-$ python main.py
+$ git checkout django
+$ pip install -r requirements.txt
+$ gunicorn helloworld.wsgi
 ```
 
 现在，本示例应用已经跑在了你的 localhost:5050 端口上了。
