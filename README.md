@@ -25,6 +25,6 @@ $ git push sinacloud master:1
 
 ## 相关文档
 
-- [Python应用部署指南](http://www.sinacloud.com/doc/sc2/python-getting-started.html)
+- [Python应用部署指南](http://www.sinacloud.com/doc/sae/docker/python-getting-started.html)
 
 
