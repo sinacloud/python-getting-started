@@ -13,7 +13,7 @@ class MainHandler(tornado.web.RequestHandler):
         http_client = AsyncHTTPClient()
         response = yield http_client.fetch("http://www.sinacloud.com")
         self.set_header('content-type', 'text/plain')
-        self.write('Hello, World! ' + response.body[:100])
+        self.write('Hello, World! ' + str(response.body[:100]))
 
 application = tornado.web.Application([
     (r"/", MainHandler),
