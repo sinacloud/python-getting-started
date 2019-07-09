@@ -1,1 +1,1 @@
-web: python main.py
+web: uwsgi --http 0.0.0.0:5050 --wsgi-file main.py --processes $SINACLOUD_CONTAINER_CPU

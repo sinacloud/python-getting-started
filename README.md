@@ -5,7 +5,9 @@
 ```sh
 $ git clone https://github.com/sinacloud/python-getting-started.git
 $ cd python-getting-started
-$ python main.py
+$ git checkout uwsgi
+$ pip install -r requirements.txt
+$ uwsgi --http 0.0.0.0:5050 --wsgi-file foobar.py
 ```
 
 现在，本示例应用已经跑在了你的 localhost:5050 端口上了。
